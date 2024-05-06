@@ -1,0 +1,54 @@
+name: flutter_default_project
+description: "A new Flutter project."
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  freezed_annotation: ^2.4.1
+  auto_route: ^7.8.3
+  get_it: ^7.6.4
+  injectable: ^2.3.0
+  flutter_hooks: ^0.20.5
+  flutter_bloc: ^8.1.5
+  flutter_svg: ^2.0.10+1
+  dio: ^5.4.3+1
+  json_serializable: ^6.8.0
+  google_fonts: ^6.2.1
+  url_launcher: ^6.2.6
+  shared_preferences: ^2.2.3
+  json_annotation: ^4.9.0
+  logger: ^2.2.0
+  cached_network_image: ^3.3.1
+  gap: ^3.0.1
+  shimmer: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  freezed: ^2.4.2
+  build_runner: ^2.4.6
+  injectable_generator: ^2.4.0
+  auto_route_generator: ^7.3.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/assets/
+    - lib/assets/images/
+    - lib/assets/icons/
+    - lib/assets/fonts/
+  # fonts:
+  #   - family: AdobeClean
+  #     fonts:
+  #       - asset: assets/fonts/AdobeCleanRegular.otf
+  #       - asset: assets/fonts/AdobeCleanBold.otf
+  #         weight: 700
+  #       - asset: assets/fonts/AdobeCleanLight.otf
+  #         weight: 100
