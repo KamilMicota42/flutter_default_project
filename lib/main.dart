@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
 
-void main() {
+import 'services/secure_storage_service.dart';
+import 'settings/injection.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureDependencies(Environment.dev);
+  getIt<SecureStorageService>().init();
   runApp(const MyApp());
 }
 
