@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_default_project/settings/routes/app_router.dart';
+import 'package:flutter_default_project/utils/global/default_theme.dart';
 import 'package:injectable/injectable.dart';
 
 import 'services/secure_storage_service.dart';
 import 'settings/injection.dart';
-import 'views/home/home_screen.dart';
+import 'utils/methods/show_snack_bar.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,15 +19,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomeScreen(title: 'Flutter Demo Home Page'),
+    final appRouter = getIt<AppRouter>();
+    return MaterialApp.router(
+      theme: DefaultTheme.theme,
+      debugShowCheckedModeBanner: false,
+      routerDelegate: appRouter.delegate(),
+      routeInformationParser: appRouter.defaultRouteParser(),
+      scaffoldMessengerKey: snackbarKey,
     );
   }
 }
-
-
