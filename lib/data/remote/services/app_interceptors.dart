@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_default_project/settings/logger.dart';
+import 'package:flutter_default_project/utils/global/logger.dart';
 
 import '../../../services/secure_storage_service.dart';
 import '../../../settings/injection.dart';
