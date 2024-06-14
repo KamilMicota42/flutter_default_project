@@ -9,12 +9,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter_default_project/data/remote/repositories/user_repository.dart'
-    as _i3;
-import 'package:flutter_default_project/data/remote/services/api_service.dart'
     as _i4;
-import 'package:flutter_default_project/services/secure_storage_service.dart'
+import 'package:flutter_default_project/data/remote/services/api_service.dart'
     as _i5;
-import 'package:flutter_default_project/settings/routes/app_router.dart' as _i6;
+import 'package:flutter_default_project/services/secure_storage_service.dart'
+    as _i6;
+import 'package:flutter_default_project/settings/routes/app_router.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -29,11 +29,11 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
-    gh.lazySingleton<_i3.UserRepository>(() => _i3.UserRepository());
-    gh.lazySingleton<_i4.ApiService>(() => _i4.ApiService());
-    gh.lazySingleton<_i5.SecureStorageService>(
-        () => _i5.SecureStorageService());
-    gh.lazySingleton<_i6.AppRouter>(() => _i6.AppRouter());
+    gh.lazySingleton<_i3.AppRouter>(() => _i3.AppRouter());
+    gh.lazySingleton<_i4.UserRepository>(() => _i4.UserRepository());
+    gh.lazySingleton<_i5.ApiService>(() => _i5.ApiService());
+    gh.lazySingleton<_i6.SecureStorageService>(
+        () => _i6.SecureStorageService());
     return this;
   }
 }
